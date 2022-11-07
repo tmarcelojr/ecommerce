@@ -122,6 +122,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = '/images/'
+
+# Tell Django to point at our static folder
+STATICFIELDS_DIRS = [
+    BASE_DIR / 'static'
+]
+
+# For user uploaded content
+MEDIA_ROOT = 'static/images'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
